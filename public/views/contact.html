@@ -1,0 +1,101 @@
+﻿<div id="contact" class="dark-bg">
+    <div class="container">
+
+        <div class="sixteen columns">
+            <h2 class="white"><span class="lines">Contact</span></h2>
+        </div>
+        <!-- end sixteen columns -->
+
+        <div class="sixteen columns">
+            <div id="mc_embed_signup">
+                <form action="http://knownastheway.us6.list-manage.com/subscribe/post?u=c9ba197727ee9d35ad66f2414&amp;id=34cb4138da" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                    <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                    <input type="email" value="" name="email" class="email" id="mce-EMAIL" style="display: inline-block; width: 345px" placeholder="email address" required="">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </form>
+            </div>
+        </div>
+        <!-- end sixteen columns -->
+
+        <!--End mc_embed_signup-->
+
+        <div class="clear"></div>
+
+        <div class="eight columns">
+            <div class="contact-form">
+
+                <div ng-show="response != ''">
+                    <div ng-bind-html="response"></div>
+                </div>
+
+                <form>
+                    <p>name</p>
+                    <input type="text" name="name" ng-model="contact.name" class="text">
+
+                    <p>email</p>
+                    <input type="text" name="email" ng-model="contact.email" class="text" id="email">
+
+                    <p>message</p>
+                    <textarea name="comment"  ng-model="contact.message" class="text"></textarea>
+                    <input type="submit" id="submit" value="{{sendButtonText || 'Send'}}" ng-click="sendContactForm()" class="submit-button">
+                </form>
+
+            </div>
+            <!-- end contact-form -->
+        </div>
+        <!-- end eight columns -->
+
+        <div class="eight columns">
+
+            <div class="contact-info">
+
+                <h5>Contact Info</h5>
+                <address style="color:#fff">
+                  <strong style="color:#fff"><img src="/images/Icons/home.png" width="16px" alt="">Known As The Way, Inc.</strong><br>
+                  2401 Greenbrook Dr <br>
+                  Little Elm, TX 75068<br><br>
+                  
+                </address>               
+
+                <address style="color:#fff">
+                  <strong style="color:#fff"><img src="/images/icn-email.png" alt=""> <a href="mailto:aaron@knownastheway.com" style="color:white">aaron@knownastheway.com</a></strong><br>
+                  <strong style="color:#fff"><img src="/images/icn-phone.png" alt=""> P: <span>801-784-3929</span></strong><br>
+                  
+                </address>
+            </div>
+            <!-- end contact-info -->
+            <br><br>
+            <div class="social">
+                <ul>
+                <li><a href="http://pushbackthedarkness.blogspot.com/" target="_blank">
+                    <img src="/images/blog-icon-color.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/knownastheway" target="_blank">
+                    <img src="/images/icn-facebook-intro-color.png" alt=""></a></li>
+                <li><a href="http://knownastheway.us6.list-manage.com/subscribe/?u=c9ba197727ee9d35ad66f2414&amp;id=34cb4138da" target="_blank">
+                    <img src="/images/mailchimp-color.png" width="32" height="32" alt=""></a></li>
+
+                <li><a href="http://youtube.com/user/knownastheway" target="_blank">
+                    <img src="/images/youtube-icon-color.png" alt=""></a></li>
+                <li><a href="http://www.acts29network.org/" target="_blank">
+                    <img src="/images/acts29.jpeg" width="32" height="32" alt=""></a></li>
+                <li><a href="#serve">
+                    <img src="/images/paypal-icon.png" width="32" height="32" alt="Donate via PayPal"></a></li>
+                </ul>
+            </div>
+            <!-- end social -->
+
+        </div>
+        <!-- end eight columns -->
+
+        <div class="clear"></div>
+
+        <div class="sixteen columns">
+            <div class="copyright">
+            </div>
+        </div>
+
+
+    </div>
+    <!-- end container -->
+
+</div>

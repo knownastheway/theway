@@ -1,0 +1,6 @@
+syntax: glob
+
+.git
+.hg
+node_modules
+.anvil
