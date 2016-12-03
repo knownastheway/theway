@@ -124,7 +124,7 @@ input[type="button"] {
 	margin-bottom: 20px;
 	line-height: normal;
 	padding: 6px 10px;
-	font-family: 'Source Sans Pro', sans-serif; 
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .button1:hover,
@@ -133,7 +133,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover {
 	color: #3a3a3a;
 	background: #e8e8e8;
-	border: 0; 
+	border: 0;
 }
 
 .button1:active,
@@ -158,13 +158,13 @@ input[type="button"]:active {
 	cursor: pointer;
 	line-height: normal;
 	padding: 6px 10px;
-	font-family: 'Source Sans Pro', sans-serif; 
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .button2:hover {
 	color: #e8e8e8;
 	background: #3a3a3a;
-	border: 0; 
+	border: 0;
 }
 
 /* Fix for odd Mozilla border & padding issues */
@@ -306,6 +306,23 @@ p.separator {
 
 
 
+#separator5 {
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+#separator5 .bg6, .bg6 {
+	background: url(/images/Backgrounds/c454c739ff134c8d60922d22654d8c4e-d5fqxbq-e1363332178888.jpg) repeat 0 0 fixed;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    height: 100px;
+}
 
 
 
@@ -325,14 +342,23 @@ nav {
 }
 
 nav ul {
-	padding-top: 10px;
+	/*padding-top: 10px;*/
+  display:table;
+  table-layout: fixed; /* optional */
+  width:960px;
+  margin: 0 auto;
+  position:relative;
 }
 
 nav ul li {
-	display: inline;
+	/*display: inline;*/
 	border-right: 1px solid #e6e6e6;
 	padding: 11px 26px 8px 26px;
 	margin: 0;
+
+  display: table-cell;
+  width: auto;
+  text-align: center;
 }
 
 nav ul li:first-child {
@@ -369,7 +395,7 @@ nav a:hover {
 }
 
 #intro .bg1 {
-	background: url(/images/Backgrounds/c454c739ff134c8d60922d22654d8c4e-d5fqxbq-e1363332178888.jpg) 0 0 no-repeat fixed;	
+	background: url(/images/Backgrounds/c454c739ff134c8d60922d22654d8c4e-d5fqxbq-e1363332178888.jpg) 0 0 no-repeat fixed;
     background-size: cover !important;
     -webkit-background-size: cover !important;
 	margin: 0 auto;
@@ -711,7 +737,7 @@ p.proj-desc {
 /* #blog
 ================================================== */
 
-#blog {
+#resources {
 	background: #fff;
 	position: relative;
 	z-index: 300;
@@ -824,7 +850,7 @@ p.proj-desc {
 	margin-bottom: 20px;
 	line-height: 0;
 	padding: 3px 4px 0 4px;
-	font-family: 'Source Sans Pro', sans-serif; 
+	font-family: 'Source Sans Pro', sans-serif;
 	width: 60px;
 	height: 24px;
 }
@@ -832,7 +858,7 @@ p.proj-desc {
 .contact-form input.submit-button:hover {
 	color: #e8e8e8;
 	background: #3a3a3a;
-	border: 0; 
+	border: 0;
 }
 
 
@@ -885,12 +911,12 @@ nav select {
 }
 
 @media (max-width: 960px) {
-	
-	nav ul     { 
-		display: none; 
+
+	nav ul     {
+		display: none;
 	}
-	
-	nav select { 
+
+	nav select {
 		display: inline-block;
 		position: relative;
 		margin-top: 8px;
@@ -908,19 +934,19 @@ nav select {
 
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 1024px) {
-		
+
 		.title {
 			position: relative;
 		}
-		
+
 		#intro {
 			height: 500px;
 		}
-		
+
 		.title {
 			padding-top: 20px;
 		}
-		
+
 		h1 {
 			font-size: 100px;
 			margin-bottom: 60px;
@@ -929,7 +955,7 @@ nav select {
 			font-size: 80px;
 			margin-bottom: 20px;
 		}
-		
+
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -940,66 +966,66 @@ nav select {
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
-		
+
 		h1 {
 			font-size: 70px;
 			margin-bottom: 20px;
 		}
-		
+
 		h1.small {
 			font-size: 40px;
 			margin-bottom: 20px;
 		}
-		
+
 		.title p {
 			font-size: 20px;
 			line-height: 28px;
 		}
-		
+
 		nav ul li {
 			padding-left: 10px;
 			padding-right: 10px;
 		}
-		
+
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		
+
 		#intro {
 			height: 430px;
 		}
-		
+
 		.title {
 			position: relative;
 			padding-top: 30px;
 		}
-		
+
 		.intro-line {
 			display: none;
 		}
-		
+
 		h1 {
 			font-size: 60px;
 			margin-bottom: 20px;
 		}
-		
+
 		h1.small {
 			font-size: 30px;
 			margin-bottom: 20px;
 		}
-		
+
 		.title p {
 			font-size: 18px;
 			line-height: 28px;
 		}
-		
-		
+
+
 		nav ul li {
 			padding-left: 5px;
 			padding-right: 5px;
 		}
-		
+
 	}
 
 
