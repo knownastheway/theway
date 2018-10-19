@@ -1,11 +1,11 @@
 {
   "name": "the-way",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Known As The Way",
   "main": "main.js",
   "repository": {
     "type": "mercurial",
-    "url": "https://bitbucket.org/daniel_bodnar/theway"
+    "url": "https://github.com/knownastheway/theway"
   },
   "dependencies": {
     "path": "~0.4.9",
