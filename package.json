@@ -8,14 +8,17 @@
     "url": "https://github.com/knownastheway/theway"
   },
   "dependencies": {
-    "path": "~0.4.9",
-    "express": "~3.4.7",
-    "mongoose": "~3.6.20",
-    "ejs": "~0.8.4",
-    "jade": "~0.35.0",
-    "nodemailer": "~0.5.15",
-    "connect": "~2.12.0",
-    "express-minify": "0.0.7",
-    "piler": "~0.5.0"
+    "connect": "latest",
+    "constantinople": "^3.1.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "latest",
+    "express": "latest",
+    "express-minify": "latest",
+    "method-override": "^3.0.0",
+    "morgan": "latest",
+    "nodemailer": "latest",
+    "path": "latest",
+    "pug": "^2.0.4",
+    "uglify-js": "latest"
   }
 }

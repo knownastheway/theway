@@ -1,53 +1,59 @@
 var express = require('express'),
 	path = require('path'),
-	connect = require('connect'),
-	//piler = require('piler'),
+	logger = require('morgan'),
+	cookieParser = require('cookie-parser'),
+	methodOverride = require('method-override'),
+	bodyParser = require('body-parser'),
     nodemailer = require('nodemailer');
 
-var app = express(express.logger());
+var static = express.static;
+
+var app = express(logger());
+
+
 
 var port = process.env.PORT || 8080;
+var EMAIL_PASS = process.env.EMAIL_PASS;
+var EMAIL_ADDR = process.env.EMAIL_ADDR;
 var oneDay = 86400000;
 
 app.engine('html', require('ejs').renderFile);
-app.engine('jade', require('jade').__express);
+app.engine('pug', require('pug').__express);
 app.set('views', __dirname + '/public');
 
-app.use(express.cookieParser('top secret'));
-
-app.use(connect.urlencoded())
-app.use(connect.json())
-
-app.use(express.methodOverride());
+app.use(cookieParser('top secret'));
+app.use(bodyParser());
+app.use(express.json())
+app.use(methodOverride());
 
 
 
-app.use('/css', express.static(__dirname, '/public/css', {
+app.use('/css', static('public/css', {
     //maxAge: oneDay
 }));
-app.use('/images', express.static(__dirname, '/public/images', {
+app.use('/images', static('public/images', {
     //maxAge: oneDay
 }));
-app.use('/scripts', express.static(__dirname, '/public/scripts', {
+app.use('/scripts', static('public/scripts', {
     //maxAge: oneDay
 }));
-app.use(express.static(__dirname + '/public', {
+app.use(static('public', {
     //maxAge: oneDay
 }));
 
 
-var smtpTransport = nodemailer.createTransport("SMTP",{
+var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-        user: "daniel@knownastheway.com",
-        pass: "cr@t0rz!"
+        user: EMAIL_ADDR,
+        pass: EMAIL_PASS
     }
 });
 
 
 app.get('/',
 function(req, res)
-{		
+{
 	res.render('index.html');
 });
 
