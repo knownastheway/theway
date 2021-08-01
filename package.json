@@ -1,24 +1,24 @@
 {
   "name": "the-way",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Known As The Way",
   "main": "main.js",
   "repository": {
-    "type": "mercurial",
+    "type": "git",
     "url": "https://github.com/knownastheway/theway"
   },
   "dependencies": {
     "connect": "latest",
-    "constantinople": "^3.1.1",
-    "cookie-parser": "^1.4.5",
+    "constantinople": "latest",
+    "cookie-parser": "latest",
     "ejs": "latest",
     "express": "latest",
     "express-minify": "latest",
-    "method-override": "^3.0.0",
+    "method-override": "latest",
     "morgan": "latest",
     "nodemailer": "latest",
     "path": "latest",
-    "pug": "^2.0.4",
+    "pug": "latest",
     "uglify-js": "latest"
   }
 }
