@@ -1,17 +1,22 @@
 {
-  "name": "the-way",
-  "version": "0.0.3",
+  "name": "theway",
+  "version": "0.0.5",
   "description": "Known As The Way",
   "main": "main.js",
+  "scripts": {
+    "build": "npm install --production",
+    "start": "NODE_ENV=production node main.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knownastheway/theway"
+    "url": "https://github.com/knownastheway/theway.git"
   },
   "dependencies": {
+    "body-parser": "latest",
     "connect": "latest",
     "constantinople": "latest",
     "cookie-parser": "latest",
-    "ejs": "^3.1.8",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-minify": "latest",
     "method-override": "latest",

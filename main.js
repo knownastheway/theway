@@ -85,10 +85,10 @@ app.post('/contact', function(req, res) {
 
 
 
-if (process.argv[2])
+if (port)
 {
-	app.listen(process.argv[2]);
-	console.log('listening on localhost:' + process.argv[2]);
+	app.listen(port);
+	console.log('listening on localhost:' + port);
 }
 else
 {
