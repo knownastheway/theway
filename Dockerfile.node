@@ -1,0 +1,43 @@
+# syntax = docker/dockerfile:1
+
+# Use Bun's official image
+FROM docker.io/oven/bun:1.2.18-alpine as base
+
+LABEL fly_launch_runtime="Bun"
+
+# App lives here
+WORKDIR /app
+
+# Set production environment
+ENV NODE_ENV=production
+
+# Build stage
+FROM base as build
+
+# Install dependencies
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
+
+# Copy source code
+COPY . .
+
+# Build the single executable
+RUN bun run build
+
+# Final stage - minimal image with just the executable
+FROM alpine:latest
+
+# Install runtime dependencies for Bun executable
+RUN apk add --no-cache libc6-compat libstdc++ libgcc
+
+# Create app directory
+WORKDIR /app
+
+# Copy only the executable
+COPY --from=build /app/dist/theway .
+
+# Expose port
+EXPOSE 8080
+
+# Start the server
+CMD ["./theway"]

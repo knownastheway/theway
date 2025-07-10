@@ -3,27 +3,25 @@
   "version": "0.0.5",
   "description": "Known As The Way",
   "main": "main.js",
+  "type": "module",
   "scripts": {
-    "build": "npm install --production",
-    "start": "NODE_ENV=production node main.js"
+    "build": "bun build --compile --outfile=./dist/theway --target=bun main.js",
+    "start": "bun run main.js",
+    "dev": "bun --hot main.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/knownastheway/theway.git"
   },
   "dependencies": {
-    "body-parser": "latest",
-    "connect": "latest",
-    "constantinople": "latest",
-    "cookie-parser": "latest",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "express-minify": "latest",
-    "method-override": "latest",
-    "morgan": "latest",
-    "nodemailer": "latest",
-    "path": "latest",
-    "pug": "latest",
-    "uglify-js": "latest"
+    "nodemailer": "^6.9.14"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10",
+    "@types/bun": "latest"
+  },
+  "dockerfile": {
+    "alpine": true,
+    "bun": true
   }
 }
