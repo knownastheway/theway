@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Development
 - **Start server:** `npm start` or `NODE_ENV=production node main.js` (runs on port 8080 by default, or PORT env var)
 - **Install dependencies:** `npm install`
-- **Production build:** `npm run build` (installs production dependencies only)
+- **Production build:** `npm run build` (`npm ci --omit=dev`)
 
 ### Deployment
 - **Deploy to Fly.io:** `fly deploy`
@@ -21,7 +21,7 @@ This is a simple Express.js website for "Known As The Way" (knownastheway.com) w
 ### Core Application
 - **main.js**: Express server setup with email contact form functionality using Nodemailer
 - **Port:** Defaults to 8080, configurable via PORT environment variable
-- **View engines:** EJS and Pug configured, views served from `/public` directory
+- **View engine:** EJS renders `.html` files from `/public`
 
 ### Environment Variables
 - `EMAIL_ADDR`: Gmail address for sending contact form emails
@@ -41,5 +41,5 @@ This is a simple Express.js website for "Known As The Way" (knownastheway.com) w
 
 ### Deployment Configuration
 - **Fly.io**: Configured in `fly.toml` (app name: "theway", region: atl, port: 8080)
-- **Docker**: Multi-stage build with Node.js 18.5.0 slim base image
+- **Docker**: Multi-stage build on node:26 trixie-slim, runs as the non-root node user
 - **Production mode**: Always runs with NODE_ENV=production
